@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scrolling Effect</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        body, html {
+            margin: 0;
+            padding: 0;
+            height: 200vh; /* Make page scrollable */
+            background: black;
+        }
+        
+        .container {
+            position: relative;
+            height: 200vh; /* Enough height to scroll */
+        }
+        
+        .scroll-section {
+            position: sticky;
+            top: 0;
+            height: 100vh;
+            overflow: hidden;
+        }
+        
+        .box {
+            position: absolute;
+            width: 100%;
+            height: 100vh;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 3rem;
+            color: white;
+            transition: transform 0.5s ease-out;
+        }
+        
+        .box1 {
+            background-color: blue;
+        }
+        
+        .box2 {
+            background-color: red;
+        }
+        
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="scroll-section">
+            <div class="box box1">Section 1</div>
+            <div class="box box2">Section 2</div>
+        </div>
+    </div>
+</body>
+</html>
