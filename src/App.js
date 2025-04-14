@@ -3,7 +3,7 @@ import './App.css';
 import HomePage from "./pages/HomePage"
 import Navbar from "./components/Navbar"
 import Footer from "./components/Footer"
-import GraphicsPage from './pages/GraphicsPage';
+import GraphicDetails from './pages/GraphicDetails';
 import LandingSection from './pages/LandingSection';
 import ZoomScrollPage from './pages/ZoomScrollPage';
 import React from 'react';
@@ -18,7 +18,7 @@ function App() {
       
       <Routes>
       <Route path="/" element={<HomePage/>}/>
-      {/* <Route path="/GraphicsPage" element={<GraphicsPage/>}/> */}
+      <Route path="/GraphicDetails" element={<GraphicDetails/>}/>
       {/* <Route path='/LandingSection' element={<LandingSection/>}/> */}
       <Route path='ZoomScrollPage' element={<ZoomScrollPage/>}/>
       </Routes>

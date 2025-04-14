@@ -57,8 +57,10 @@ import top_img from "../assests/tejas_top.png";
 import bottom_img from "../assests/tejas_bottom.png";
 import tejas from "../assests/IMG-20250221-WA0017-removebg-preview.png"
 import { Link } from "react-router-dom";
+import { useEffect } from "react";
 
 const HomePage = () => {
+ 
   const { scrollYProgress } = useScroll();
 
   // Move boxes away
@@ -67,7 +69,9 @@ const HomePage = () => {
   
   // Gradually disappear
   const opacityEffect = useTransform(scrollYProgress, [0.2, 0.4], [1, 0]);
-
+  useEffect(()=>{
+    window.scrollTo=(0,0);
+  })
   return (
 <div className="body">
     <div className="container">

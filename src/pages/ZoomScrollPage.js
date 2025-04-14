@@ -70,11 +70,14 @@ import graphic5 from "../assests/graphic_5.png";
 import graphic6 from "../assests/graphic_6.png";
 import graphic7 from "../assests/graphic_7.png";
 import graphic1 from "../assests/graphic_1.png";
+// import { Link } from "react-router-dom";
+import { useNavigate } from 'react-router-dom';
 
 
 
 
 const ZoomScrollPage = () => {
+ 
   const [scale, setScale] = useState(1.5);
 
   const images=[
@@ -87,6 +90,14 @@ const ZoomScrollPage = () => {
       graphic7,
 
   ]
+  const navigate = useNavigate();
+
+  const handleClick = (src, index) => {
+    navigate("/GraphicDetails", {
+      state: { src, index },
+    });
+  };
+
 
   useEffect(() => {
     window.scrollTo({ top: 0, behavior: "auto" });
@@ -101,6 +112,11 @@ const ZoomScrollPage = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+  
 
   return (
 
@@ -119,11 +135,17 @@ const ZoomScrollPage = () => {
             
             </div>
             
+            {/* <Link to="/GraphicDetails"> */}
             <div className="gallery-container">
               {images.map((src,idx) => (
-                <img key={idx} src={src} alt={`Design ${idx}`} className="gallery-img" />
+                <img key={idx} src={src} alt={`Design ${idx}`} className="gallery-img"  
+                onClick={() => handleClick(src, idx)}
+                style={{ cursor: "pointer" }}/>
+                
+
               ))}
             </div>
+            {/* </Link> */}
     </div>
     
   );
