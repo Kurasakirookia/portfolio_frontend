@@ -55,8 +55,10 @@ import "../css/HomePage.css";
 import { motion, useScroll, useTransform } from "framer-motion";
 import top_img from "../assests/tejas_top.png";
 import bottom_img from "../assests/tejas_bottom.png";
+import tejas from "../assests/IMG-20250221-WA0017-removebg-preview.png"
+import { Link } from "react-router-dom";
 
-const ScrollingEffect = () => {
+const HomePage = () => {
   const { scrollYProgress } = useScroll();
 
   // Move boxes away
@@ -111,8 +113,9 @@ const ScrollingEffect = () => {
 
     <div className="inner_container">
         <img src="" alt="" className="sign" />
-        
-        <img src="" alt="" className="me_img" />
+        <div className="me_div">
+          <img  alt="" className="me_img" />
+        </div>
         <div className="text_container">
             
         </div>
@@ -122,11 +125,27 @@ const ScrollingEffect = () => {
     
 
     <div className="black-section">
-    <h1 style={{ color: "white" }}>Black Section</h1>
+         <div className="inner_black">
+                <div className="education_container">
+                    <Link to="/ZoomScrollPage"  className="education_display">
+                    </Link>
+                </div>
+
+
+                <div className="travelplans">
+                   <div className="travel_display">
+
+                    </div>
+                </div>
+          </div>   
     </div>
+
+   
+
+
 </div>
 
   );
 };
 
-export default ScrollingEffect;
+export default HomePage;
