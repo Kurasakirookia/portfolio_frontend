@@ -69,9 +69,7 @@ const HomePage = () => {
   
   // Gradually disappear
   const opacityEffect = useTransform(scrollYProgress, [0.2, 0.4], [1, 0]);
-  useEffect(()=>{
-    window.scrollTo=(0,0);
-  })
+  
   return (
 <div className="body">
     <div className="container">
