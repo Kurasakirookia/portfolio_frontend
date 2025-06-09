@@ -1,5 +1,5 @@
 {
-  "homepage": "https://Kurasakirookia.github.io/portfolio",
+  "homepage": "https://kurasakirookia.github.io/portfolio",
   "name": "portfolio_0",
   "version": "0.1.0",
   "private": true,
@@ -41,6 +41,7 @@
     ]
   },
   "devDependencies": {
+    "gh-pages": "^6.3.0",
     "github-pages": "^3.0.2"
   }
 }
