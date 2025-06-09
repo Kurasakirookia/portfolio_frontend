@@ -5,7 +5,7 @@
 
   const Navbar = () => {
     return (
-      <nav>
+      <div className='Nav'>
         <ul className="nav_list">
           <li className="nav_item" ><img className="nav_logo" src={nav_logo} alt="" /></li>
           <li className="nav_item"></li>
@@ -15,7 +15,7 @@
         </ul>
         <img src={sign} alt="logo" className="logo" />
         {/* <p className="gallery">Gallery</p> */}
-      </nav>
+      </div>
     );
   };
 

@@ -1,0 +1,51 @@
+[
+  {
+    "title": "Personal Portfolio",
+    "link": "https://kurasakirookia.github.io/",
+    "description": "A personal portfolio website showcasing my work, skills, and contact details.",
+    "startDate": "2023-06-01",
+    "endDate": "2023-06-15"
+  },
+  {
+    "title": "VIBECART",
+    "link": "https://kurasakirookia.github.io/VIBECART/",
+    "description": "An e-commerce frontend project focused on user experience and product catalog.",
+    "startDate": "2023-07-01",
+    "endDate": "2023-07-20"
+  },
+  {
+    "title": "DevOps Dashboard",
+    "link": "https://kurasakirookia.github.io/devops/",
+    "description": "A dashboard built for monitoring and managing DevOps pipelines.",
+    "startDate": "2023-08-05",
+    "endDate": "2023-08-25"
+  },
+  {
+    "title": "Landing Page Feature",
+    "link": "https://kurasakirookia.github.io/LandingPageFeature/",
+    "description": "A feature-rich landing page template with responsive design.",
+    "startDate": "2023-09-10",
+    "endDate": "2023-09-18"
+  },
+  {
+    "title": "React Starter App",
+    "link": "https://kurasakirookia.github.io/my-app/",
+    "description": "A starter template for React.js apps to kickstart development.",
+    "startDate": "2023-10-01",
+    "endDate": "2023-10-10"
+  },
+  {
+    "title": "SIH Hackathon Project",
+    "link": "https://kurasakirookia.github.io/SIH/",
+    "description": "A submission for the Smart India Hackathon with innovative tech solutions.",
+    "startDate": "2023-11-01",
+    "endDate": "2023-11-30"
+  },
+  {
+    "title": "SamyogPay",
+    "link": "https://samyogpay.netlify.app/",
+    "description": "A decentralized payment gateway platform aimed at simplifying online transactions.",
+    "startDate": "2024-01-05",
+    "endDate": "2024-01-30"
+  }
+]

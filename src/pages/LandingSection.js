@@ -5,6 +5,7 @@ import TejasImage from '../assests/Tejas.png';
 
 
 
+
 const LandingSection = () => {
   const [scrollY, setScrollY] = useState(0);
 
