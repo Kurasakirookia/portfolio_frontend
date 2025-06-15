@@ -15,12 +15,12 @@ import Projects from './pages/Projects';
 function App() {
   return (
     
-   <Router>
+   <Router basename="/portfolio">
     <Navbar></Navbar>
       
       <Routes >
         {/* <Route element={<Layout />}> */}
-            <Route path="/portfolio" element={<HomePage/>}/>
+            <Route path="/" element={<HomePage/>}/>
             <Route path="/GraphicDetails" element={<GraphicDetails/>}/>
             <Route path='/LandingSection' element={<LandingSection/>}/>
             <Route path='ZoomScrollPage' element={<ZoomScrollPage/>}/>
