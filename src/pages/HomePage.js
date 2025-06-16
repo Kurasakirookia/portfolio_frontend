@@ -7,6 +7,8 @@ import tejas from "../assests/IMG-20250221-WA0017-removebg-preview.png"
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import homeimg from "../assests/hem.JPG"
+import frame_img from "../assests/frame_portfolio.png"
+import experience from "../data/experience";
 
 
 const HomePage = () => {
@@ -32,7 +34,7 @@ const HomePage = () => {
             <img src={homeimg} alt="Background" className="background-img" />
           </div>
         </div>
-       
+        
 
        {/* <div className="scroll-wrapper"> */}
           <div className="scroll-section">
@@ -98,6 +100,48 @@ const HomePage = () => {
                     </Link>
                 </div>
           </div>   
+    </div>
+
+    <div className="intro_section">
+      <div className="tejas_intro_image_container">
+        <img src={frame_img} alt="" />
+      </div>
+
+      <div className="right_intro">
+
+        <div className="tejas_intro">
+          <h2 className="texts">ABOUT ME</h2>
+          <p className="textp"> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi, unde. qui asperiores ea hic facilis eum magnam porro! Velit <br />exercitationem perspiciatis, odio accusantium aliquam omnis <br /> aut quo, ab distinctio quidem, delectus fuga voluptatem! Iusto!</p>
+        </div>
+
+        {/* <p className="texts texts_frame">Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni similique expedita nemo veniam maxime. Dolor sed id adipisci inventore necessitatibus?</p> */}
+
+        <div className="exprience_intro">
+          <h2 className="texts">Experience</h2>
+          <div className="experience_container">
+           { experience.map((company,index)=>(
+            // <div className="row row1_exp">
+                <div className={`company company${index}`}>
+                  <img src={company.logoSrc} alt={`${company.companyName}`} className="logoicon" />
+                  <div className="company_details">
+                    <Link className="company_name textp">{company.companyName}</Link>
+                    <p className="texts tenur textp"><b>{company.tenure}</b></p>
+                  </div>
+                </div>
+                
+            // </div>
+            ))} 
+          </div>
+        </div>
+
+      </div>
+
+    </div>
+    <div className="intro_section skills_section">
+      <div className="right_intro skills_intro"></div>
+      <div className="tejas_intro_image_container skills_icons"></div>
+
+
     </div>
 
    
