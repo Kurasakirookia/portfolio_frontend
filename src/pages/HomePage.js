@@ -9,6 +9,7 @@ import { useEffect } from "react";
 import homeimg from "../assests/hem.JPG"
 import frame_img from "../assests/frame_portfolio.png"
 import experience from "../data/experience";
+import skills from "../data/skills"
 
 
 const HomePage = () => {
@@ -119,27 +120,153 @@ const HomePage = () => {
         <div className="exprience_intro">
           <h2 className="texts">Experience</h2>
           <div className="experience_container">
-           { experience.map((company,index)=>(
-            // <div className="row row1_exp">
-                <div className={`company company${index}`}>
-                  <img src={company.logoSrc} alt={`${company.companyName}`} className="logoicon" />
-                  <div className="company_details">
-                    <Link className="company_name textp">{company.companyName}</Link>
-                    <p className="texts tenur textp"><b>{company.tenure}</b></p>
+            { experience.map((company,index)=>(
+              // <div className="row row1_exp">
+                  <div className={`company company${index}`}>
+                    <img src={company.logoSrc} alt={`${company.companyName}`} className="logoicon" />
+                    <div className="company_details">
+                      <Link className="company_name textp">{company.companyName}</Link>
+                      <p className="texts tenur textp"><b>{company.tenure}</b></p>
+                    </div>
                   </div>
-                </div>
-                
-            // </div>
-            ))} 
-          </div>
+                  
+              // </div>
+              ))} 
+            </div>
         </div>
 
       </div>
 
     </div>
     <div className="intro_section skills_section">
-      <div className="right_intro skills_intro"></div>
-      <div className="tejas_intro_image_container skills_icons"></div>
+
+      <div className="right_intro skills_intro">
+          <div className="sticky_section_title">
+            <h1 className="texts">Skills</h1>
+          </div>
+          
+          <div className="exprience_intro" id="programming_languages">
+            <h2 className="texts">Programming Languages</h2>
+            
+              <div className="experience_container">
+              { skills.programming_languages.map((language,index)=>(
+                // <div className="row row1_exp">
+                    <div className={`company company${index}`}>
+                      <img src={language.logoSrc} alt={`${language.name}`} className="logoicon" />
+                      <div className="company_details">
+                        <Link className="company_name textp">{language.name}</Link>
+                        <p className="texts tenur textp"><b>{language.level}</b></p>
+                      </div>
+                    </div>
+                    
+                // </div>
+                ))} 
+              </div>
+
+          </div>
+
+          <div className="exprience_intro" id="Web_Development">
+            <h2 className="texts">Web Development</h2>
+            
+              <div className="experience_container">
+              { skills.web_development.map((language,index)=>(
+                // <div className="row row1_exp">
+                    <div className={`company company${index}`}>
+                      <img src={language.logoSrc} alt={`${language.name}`} className="logoicon" />
+                      <div className="company_details">
+                        <Link className="company_name textp">{language.name}</Link>
+                        <p className="texts tenur textp"><b>{language.role}</b></p>
+                      </div>
+                    </div>
+                    
+                // </div>
+                ))} 
+              </div>
+              
+          </div>
+
+          <div className="exprience_intro" id="design_tools">
+            <h2 className="texts">Design Tools</h2>
+            
+              <div className="experience_container">
+              { skills.design_tools.map((language,index)=>(
+                // <div className="row row1_exp">
+                    <div className={`company company${index}`}>
+                      <img src={language.logoSrc} alt={`${language.name}`} className="logoicon" />
+                      <div className="company_details">
+                        <Link className="company_name textp">{language.name}</Link>
+                        <p className="texts tenur textp"><b>{language.type}</b>&emsp;<b>{language.level}</b></p>
+                      </div>
+                    </div>
+                    
+                // </div>
+                ))} 
+              </div>
+              
+          </div>
+
+          <div className="exprience_intro" id="data_visualization">
+            <h2 className="texts">Data Visualization</h2>
+            
+              <div className="experience_container">
+              { skills.data_visualization.map((language,index)=>(
+                // <div className="row row1_exp">
+                    <div className={`company company${index}`}>
+                      <img src={language.logoSrc} alt={`${language.name}`} className="logoicon" />
+                      <div className="company_details">
+                        <Link className="company_name textp">{language.name}</Link>
+                        <p className="texts tenur textp"><b>{language.type}</b>&emsp;<b>{language.level}</b></p>
+                      </div>
+                    </div>
+                    
+                // </div>
+                ))} 
+              </div>
+              
+          </div>
+
+          <div className="exprience_intro" id="documentation">
+            <h2 className="texts">Documentation</h2>
+            
+              <div className="experience_container">
+              { skills.documentation.map((language,index)=>(
+                // <div className="row row1_exp">
+                    <div className={`company company${index}`}>
+                      <img src={language.logoSrc} alt={`${language.name}`} className="logoicon" />
+                      <div className="company_details">
+                        <Link className="company_name textp">{language.name}</Link>
+                        <p className="texts tenur textp"><b>{language.type}</b>&emsp;<b>{language.level}</b></p>
+                      </div>
+                    </div>
+                    
+                // </div>
+                ))} 
+              </div>
+              
+          </div>
+
+          <div className="exprience_intro" id="development_tools">
+            <h2 className="texts">Development Tools</h2>
+            
+              <div className="experience_container">
+              { skills.development_tools.map((language,index)=>(
+                // <div className="row row1_exp">
+                    <div className={`company company${index}`}>
+                      <img src={language.logoSrc} alt={`${language.name}`} className="logoicon" />
+                      <div className="company_details">
+                        <Link className="company_name textp">{language.name}</Link>
+                        <p className="texts tenur textp"><b>{language.type}</b>&emsp;<b>{language.level}</b></p>
+                      </div>
+                    </div>
+                    
+                // </div>
+                ))} 
+              </div>
+              
+          </div>
+      </div>
+      <div className="tejas_intro_image_container skills_icons">
+      </div>
 
 
     </div>

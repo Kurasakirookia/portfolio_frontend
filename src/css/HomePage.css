@@ -295,7 +295,7 @@
     position: relative;
     width: 100vw;
     height: 95vh;
-    background-color: #fff;
+    background-color:#FFE6E3;
     display: flex;
     justify-content: center;
 }
@@ -313,6 +313,7 @@
 }
 
 .right_intro{
+    position: relative;
     min-width:50%;
     max-width: 50%;    
     display: flex;
@@ -323,6 +324,9 @@
     
 
     
+}
+.right_intro::-webkit-scrollbar {
+  display: none; /* Chrome, Safari, Opera */
 }
 .tejas_intro{
     
@@ -416,4 +420,17 @@
     text-decoration: none;
     padding-left: 15px;
     font-size: 24px;
+}
+
+
+.skills_intro{
+    padding-left: 5vw;
+}
+.sticky_section_title{
+    
+    top: 0;
+    background: transparent; 
+    z-index: 1; 
+    position: sticky;
+    padding: 10px 0;
 }
