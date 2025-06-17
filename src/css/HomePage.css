@@ -1,60 +1,7 @@
-/* 
 
 .container {
     position: relative;
-    height: 300vh; 
-    background-color: black;
-}
-
-.scroll-section {
-    position: sticky;
-    top: 0;
-    height: 100vh;
-    overflow: hidden;
-    z-index: 2;
-}
-
-.box {
-    position: absolute;
-    width: 100%;
-    height: 50vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-
-.box1, .box2 {
-    background-color: #FFE6E3;
-}
-
-
-.next-section {
-    height: 100vh;
-    background-color: white;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    z-index: 1; 
-}
-
-.section{
-    all: unset;
-    height: 168px;
-}
-.box1 {
-    background-color: #FFE6E3;
-    align-items: flex-end;
-}
-
-.box2 {
-    background-color:#FFE6E3;
-    align-items: flex-start;
-} */
-
-.container {
-    position: relative;
-    height: 190vh; /* Enough space for scroll transitions */
+    height: 260vh; /* Enough space for scroll transitions */
     background-color: #B9B28A;
     z-index: 0;
       /* background-image: url("../assests/homepage_2.png"); 
@@ -89,10 +36,7 @@
   object-fit: cover;
 }
 
-/* .scroll-wrapper {
-  position: relative;
-  height: 300vh;
-} */
+
 
 
 .scroll-section {
@@ -124,20 +68,6 @@
 }
 
 
-
-/* .image-wrapper {
-  position: sticky;
-  top: 0;
-  height: 100vh;
-  z-index: 0;
-  overflow: hidden;
-}
-
-.pinned-image {
-  width: 100%;
-  height: 100%;
-  object-fit: cover;
-} */
 
 
 /* Black Background Section (Appears After Scroll) */
@@ -422,6 +352,16 @@
     font-size: 24px;
 }
 
+.sticky_section_title>h1{
+
+}
+.skills_intro{
+    height: 95vh;
+}
+.skills_intro>.exprience_intro>.experience_container{
+    margin-top: 5vh;
+}
+
 
 .skills_intro{
     padding-left: 5vw;
@@ -434,3 +374,4 @@
     position: sticky;
     padding: 10px 0;
 }
+

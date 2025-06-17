@@ -1,0 +1,50 @@
+body{
+  position: relative;
+}
+
+.scroll-fixed-wrapper {
+  
+  /* background: transparent;
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+  height: 200vh; 
+  position: relative;
+  overflow: hidden;
+    z-index: 10;
+   pointer-events: auto; */
+   /* transform: rotate(-3deg); */
+    position: relative;
+  /* top: 0;
+  left: 0; */
+  width: 100vw;
+  height: 100vh;
+  pointer-events: none;
+   
+
+
+}
+
+.text-line {
+  /* z-index: 100; */
+
+  position: fixed;
+  width: 100vw;
+  font-size: 20vw;
+  font-weight: bold;
+  white-space: nowrap;
+  color: #ff2d2d;
+  line-height: 1;
+  will-change: transform;
+  pointer-events: none;
+
+}
+.right-to-left{
+  /* padding: -10vw; */
+}
+
+.left-to-right {
+  top: 30%;
+}
+
+.right-to-left {
+  top: 60%;
+}

@@ -10,6 +10,7 @@ import ZoomScrollPage from './pages/ZoomScrollPage';
 import React from 'react';
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from './pages/Projects';
+import Scroll from "./components/ScrollText"
 
 
 function App() {
@@ -25,6 +26,8 @@ function App() {
             <Route path='/LandingSection' element={<LandingSection/>}/>
             <Route path='ZoomScrollPage' element={<ZoomScrollPage/>}/>
             <Route path='Projects' element={<Projects/>}/>
+            <Route path='scroll' element={<Scroll/>}/>
+
         {/* </Route> */}
       </Routes>
     {/* <Footer></Footer> */}

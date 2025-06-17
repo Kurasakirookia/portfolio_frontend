@@ -10,6 +10,8 @@ import homeimg from "../assests/hem.JPG"
 import frame_img from "../assests/frame_portfolio.png"
 import experience from "../data/experience";
 import skills from "../data/skills"
+import ScrollText from "../components/ScrollText";
+import {useRef } from "react";
 
 
 const HomePage = () => {
@@ -18,14 +20,31 @@ const HomePage = () => {
 
   // Move boxes away
   const moveUp = useTransform(scrollYProgress, [0, 0.5], ["0%", "-100vh"]);
-  const moveDown = useTransform(scrollYProgress, [0, 0.5], ["50vh", "150vh"]);
+  const moveDown = useTransform(scrollYProgress, [0, 0.5], ["50vh", "160vh"]);
   
   // Gradually disappear
-  const opacityEffect = useTransform(scrollYProgress, [0.2, 0.4], [1, 0]);
+  const opacityEffect = useTransform(scrollYProgress, [0.4, 0.6], [1, 0]);
   // const { scrollYProgress } = useScroll();
   // const fixedImageOpacity = useTransform(scrollYProgress, [0, 0.5, 0.55], [1, 1, 0]); 
 
+  //  const leftRef = useRef(null);
+  //   const rightRef = useRef(null);
+  
+  //   useEffect(() => {
+  //     const handleScroll = () => {
+  //       const scrollY = window.scrollY;
+  //       if (leftRef.current && rightRef.current) {
+  //         leftRef.current.style.transform = `translateX(${scrollY * 1}px)`;
+  //         rightRef.current.style.transform = `translateX(${-scrollY * 1}px)`;
+  //       }
+  //     };
+  
+  //     window.addEventListener("scroll", handleScroll);
+  //     return () => window.removeEventListener("scroll", handleScroll);
+  //   }, []);
+  //   console.log("ScrollText mounted");
   return (
+
 <div className="body">
     <div className="container">
 
@@ -125,7 +144,7 @@ const HomePage = () => {
                   <div className={`company company${index}`}>
                     <img src={company.logoSrc} alt={`${company.companyName}`} className="logoicon" />
                     <div className="company_details">
-                      <Link className="company_name textp">{company.companyName}</Link>
+                      <Link className="company_name textp" to='scroll'>{company.companyName}</Link>
                       <p className="texts tenur textp"><b>{company.tenure}</b></p>
                     </div>
                   </div>
@@ -267,10 +286,11 @@ const HomePage = () => {
       </div>
       <div className="tejas_intro_image_container skills_icons">
       </div>
-
-
     </div>
-
+    
+    
+   
+   
    
 
 
