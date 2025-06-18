@@ -1,31 +1,20 @@
-body{
-  position: relative;
+/* ScrollText.css */
+body {
+  margin: 0;
+  background: #fff4f2;
+  font-family: sans-serif;
 }
 
-.scroll-fixed-wrapper {
-  
-  /* background: transparent;
-  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
-  height: 200vh; 
+.scroll-wrapper {
+
+  height: 200vh; /* Ensures enough vertical scroll */
   position: relative;
   overflow: hidden;
-    z-index: 10;
-   pointer-events: auto; */
-   /* transform: rotate(-3deg); */
-    position: relative;
-  /* top: 0;
-  left: 0; */
-  width: 100vw;
-  height: 100vh;
-  pointer-events: none;
-   
-
-
+  transform: rotate(-3deg);
 }
 
 .text-line {
-  /* z-index: 100; */
-
+  font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
   position: fixed;
   width: 100vw;
   font-size: 20vw;
@@ -35,16 +24,12 @@ body{
   line-height: 1;
   will-change: transform;
   pointer-events: none;
-
-}
-.right-to-left{
-  /* padding: -10vw; */
 }
 
 .left-to-right {
-  top: 30%;
+  top: 20%;
 }
 
 .right-to-left {
-  top: 60%;
+  top: 45%;
 }

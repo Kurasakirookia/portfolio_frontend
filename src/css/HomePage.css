@@ -1,7 +1,7 @@
 
 .container {
     position: relative;
-    height: 260vh; /* Enough space for scroll transitions */
+    height: 310vh; /* Enough space for scroll transitions */
     background-color: #B9B28A;
     z-index: 0;
       /* background-image: url("../assests/homepage_2.png"); 
@@ -351,9 +351,31 @@
     padding-left: 15px;
     font-size: 24px;
 }
+/* custom cursor  */
+.hover-target {
+  position: relative;
+  height: 100vh;
+  background-color: #FFE6E3;
+  cursor: none; /* Hide system cursor */
+}
+
+.custom-cursor {
+  position: fixed;
+  z-index: 9999;
+  background-color: #FE2726;
+  color: white;
+  padding: 4px 8px;
+  font-size: 12px;
+  border-radius: 4px;
+  pointer-events: none;
+  font-family: Arial, sans-serif;
+  transition: transform 0.1s ease;
+}
+
 
 .sticky_section_title>h1{
-
+  
+    background-color:#FFE6E3;
 }
 .skills_intro{
     height: 95vh;
@@ -369,9 +391,22 @@
 .sticky_section_title{
     
     top: 0;
-    background: transparent; 
+    background-color:#FFE6E3; 
     z-index: 1; 
     position: sticky;
     padding: 10px 0;
 }
 
+.scrolltextcomponent_container{
+    /* all: unset; */
+    height: 200vh;
+    width: 100vw;
+    background-color:#2c2d29;
+
+}
+.container_2{
+    
+    height: 100%;
+    width: 100%;
+
+}

@@ -1,49 +1,79 @@
-import React, { useEffect, useRef, useState } from "react";
-import { createPortal } from "react-dom";
+// // ScrollText.jsx
+// import React, { useEffect, useRef } from "react";
+// import "../css/horizontal_scroll.css"
+
+// const ScrollText = () => {
+//   const leftRef = useRef(null);
+//   const rightRef = useRef(null);
+
+//   useEffect(() => {
+//     const handleScroll = () => {
+//       const scrollY = window.scrollY;
+//       if (leftRef.current && rightRef.current) {
+//         leftRef.current.style.transform = `translateX(${scrollY * 0.6}px)`;
+//         rightRef.current.style.transform = `translateX(${-scrollY * 0.6}px)`;
+//       }
+//     };
+
+//     window.addEventListener("scroll", handleScroll);
+//     return () => window.removeEventListener("scroll", handleScroll);
+//   }, []);
+
+//   return (
+//     <div className="scroll-wrapper">
+//       <div className="text-line left-to-right" ref={leftRef}>
+//         WONG • BRANDS • 2024
+//       </div>
+//       <div className="text-line right-to-left" ref={rightRef}>
+//         WONG • BRANDS • 2024
+//       </div>
+//     </div>
+//   );
+// };
+
+// export default ScrollText;
+
+import React, { useEffect, useRef } from "react";
 import "../css/horizontal_scroll.css";
 
-const ScrollText = ({ triggerId }) => {
+const ScrollText = () => {
+  const wrapperRef = useRef(null);
   const leftRef = useRef(null);
   const rightRef = useRef(null);
-  const [visible, setVisible] = useState(false);
 
   useEffect(() => {
-    const portalRoot = document.getElementById("scroll-portal-root");
-    if (!portalRoot) return;
-
-    const triggerElement = document.getElementById(triggerId);
-    if (!triggerElement) return;
-
     const handleScroll = () => {
-      const rect = triggerElement.getBoundingClientRect();
-      const inView = rect.top <= window.innerHeight && rect.bottom >= 0;
-      setVisible(inView);
+      const wrapper = wrapperRef.current;
+      if (!wrapper) return;
 
-      if (inView && leftRef.current && rightRef.current) {
-        const offset = window.scrollY - triggerElement.offsetTop;
-        leftRef.current.style.transform = `translateX(${offset}px)`;
-        rightRef.current.style.transform = `translateX(${-offset}px)`;
+      const rect = wrapper.getBoundingClientRect();
+      const windowHeight = window.innerHeight;
+
+      // Only run animation when component is in view
+      if (rect.top < windowHeight && rect.bottom > 0) {
+        const progress = 1 - rect.top / windowHeight; // 0 to 1
+        const moveAmount = progress * 180; // Adjust this value for speed
+
+        if (leftRef.current && rightRef.current) {
+          leftRef.current.style.transform = `translateX(${moveAmount-20}px)`;
+          rightRef.current.style.transform = `translateX(${-moveAmount}px)`;
+        }
       }
     };
 
     window.addEventListener("scroll", handleScroll);
-    handleScroll(); // Initial check
-
     return () => window.removeEventListener("scroll", handleScroll);
-  }, [triggerId]);
+  }, []);
 
-  if (!visible) return null;
-
-  return createPortal(
-    <div className="scroll-fixed-wrapper">
+  return (
+    <div className="scroll-wrapper" ref={wrapperRef}>
       <div className="text-line left-to-right" ref={leftRef}>
-        TENACIOUS • NERD • 2025
+        TENATICOUS • NERD • 2025
       </div>
       <div className="text-line right-to-left" ref={rightRef}>
-        NERD • TENACIOUS • 2025
+        TENATICOUS • NERD • 2025
       </div>
-    </div>,
-    document.getElementById("scroll-portal-root")
+    </div>
   );
 };
 
