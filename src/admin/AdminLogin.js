@@ -1,6 +1,6 @@
-import React, { useState } from "react";
+import { useState } from "react";
 import axios from "axios";
-import { Link } from "react-router-dom";
+
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
 import "../css/AdminLogin.css"
@@ -8,11 +8,11 @@ import { FaEye, FaEyeSlash } from "react-icons/fa";
 import { jwtDecode } from "jwt-decode";
 
 const AdminLogin = () => {
-  //  const [role, setRole] = useState("user");
+
   const [email, setEmail] = useState("");
   const [password, setPassword] = useState("");
   const navigate = useNavigate();
-  const [showPassword, setShowPassword] = useState(false); // for toggling
+  const [showPassword, setShowPassword] = useState(false); 
 
   const handleLogin = async (e) => {
     e.preventDefault();
@@ -38,19 +38,16 @@ const AdminLogin = () => {
         console.error("Login error:", err);
     }
   };
-      // After /register
+
     
 
 
   return (
     <div className="form_container">
       <form onSubmit={handleLogin} className="_login_form">
-        {/* <select value={role} onChange={(e) => setRole(e.target.value)}>
-          <option value="user">User</option>
-          <option value="admin">Admin</option>
-        </select> */}
+
         <h2>Login</h2>
-        {/* <p className="info-text">Enter the code sent to your email</p> */}
+        
         <input
           type="email"
           placeholder="Email"
