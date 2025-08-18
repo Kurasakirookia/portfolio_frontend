@@ -22,7 +22,7 @@ const UpdateExperience = () => {
   const [existingLogo, setExistingLogo] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/admin/experiences/${id}`)
+    axios.get(`/api/admin/experiences/${id}`)
       .then(res => {
         const experience = res.data;
         setFormData({
@@ -33,7 +33,8 @@ const UpdateExperience = () => {
           endDate: experience.endDate ? experience.endDate.slice(0, 10) : '',
           logoSrc: null // don't prefill file input
         });
-        setExistingLogo(experience.logoSrc ? `http://localhost:5000${experience.logoSrc}` : '');
+        const API_URL = process.env.REACT_APP_API_URL;
+        setExistingLogo(experience.logoSrc ? `${API_URL}${experience.logoSrc}` : '');
       })
       .catch(err => console.error("Failed to fetch experience:", err));
   }, [id]);
@@ -58,7 +59,7 @@ const UpdateExperience = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/admin/experiences/${id}`, updatedFormData, {
+      await axios.put(`/api/admin/experiences/${id}`, updatedFormData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       toast.success("Experience updated successfully!");

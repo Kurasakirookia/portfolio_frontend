@@ -59,7 +59,7 @@ const AddSkill = () => {
         }
       });
 
-      await axios.post("http://localhost:5000/api/admin/skills", skillData, {
+      await axios.post("/api/admin/skills", skillData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

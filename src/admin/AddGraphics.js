@@ -28,7 +28,7 @@ const AddGraphic = () => {
         graphicData.append(key, formData[key]);
       }
 
-      await axios.post("http://localhost:5000/api/admin/graphics", graphicData, {
+      await axios.post("/api/admin/graphics", graphicData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

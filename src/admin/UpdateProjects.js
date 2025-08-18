@@ -21,7 +21,7 @@ const UpdateProject = () => {
   const [existingImage, setExistingImage] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/admin/projects/${id}`)
+    axios.get(`/api/admin/projects/${id}`)
       .then(res => {
         const project = res.data;
         setFormData({
@@ -32,7 +32,8 @@ const UpdateProject = () => {
           endDate: project.endDate ? project.endDate.slice(0, 10) : '',
           img: null // don't prefill file input
         });
-        setExistingImage(project.img ? `http://localhost:5000${project.img}` : '');
+         const API_URL = process.env.REACT_APP_API_URL;
+        setExistingImage(project.img ? `${API_URL}${project.img}` : '');
       })
       .catch(err => console.error("Failed to fetch project:", err));
   }, [id]);
@@ -57,7 +58,7 @@ const UpdateProject = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/admin/projects/${id}`, updatedFormData, {
+      await axios.put(`/api/admin/projects/${id}`, updatedFormData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       toast.success("Project updated successfully!");

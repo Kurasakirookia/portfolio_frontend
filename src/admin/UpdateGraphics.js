@@ -18,7 +18,7 @@ const UpdateGraphic = () => {
   const [existingImage, setExistingImage] = useState('');
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/admin/graphics/${id}`)
+    axios.get(`/api/admin/graphics/${id}`)
       .then(res => {
         const graphic = res.data;
         setFormData({
@@ -26,7 +26,8 @@ const UpdateGraphic = () => {
           category: graphic.category || 'general',
           imageSrc: null // don't prefill file input
         });
-        setExistingImage(graphic.imageSrc ? `http://localhost:5000${graphic.imageSrc}` : '');
+        const API_URL = process.env.REACT_APP_API_URL;
+        setExistingImage(graphic.imageSrc ? `${API_URL}${graphic.imageSrc}` : '');
       })
       .catch(err => console.error("Failed to fetch graphic:", err));
   }, [id]);
@@ -51,7 +52,7 @@ const UpdateGraphic = () => {
     }
 
     try {
-      await axios.put(`http://localhost:5000/api/admin/graphics/${id}`, updatedFormData, {
+      await axios.put(`/api/admin/graphics/${id}`, updatedFormData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       toast.success("Graphic updated successfully!");

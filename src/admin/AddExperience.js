@@ -32,7 +32,7 @@ const AddExperience = () => {
       }
 
       await axios.post(
-        "http://localhost:5000/api/admin/experiences",
+         process.env.REACT_APP_API_URL,
         experienceData,
         {
           headers: {

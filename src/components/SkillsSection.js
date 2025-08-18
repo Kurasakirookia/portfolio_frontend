@@ -2,10 +2,12 @@ import { useEffect, useState } from "react";
 import axios from "axios";
 import "../css/HomePage.css";
 export default function SkillsSection() {
+  
+  const API_URL = process.env.REACT_APP_API_URL;
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    axios.get("http://localhost:5000/api/home/skills")
+    axios.get("/api/home/skills")
       .then(res => setSkills(res.data))
       .catch(err => console.error("Error fetching skills:", err));
   }, []);
@@ -18,7 +20,7 @@ export default function SkillsSection() {
           <div className="experience_container">
             {skill.tools.map((tool, toolIndex) => (
               <div className={`company company${toolIndex}`} key={toolIndex}>
-                <img src={`http://localhost:5000${tool.logoSrc}`} alt={tool.logoSrc} className="logoicon" />
+                <img src={`${API_URL}${tool.logoSrc}`} alt={tool.logoSrc} className="logoicon" />
                 <div className="company_details">
                   <span className="company_name textm">{tool.name}</span>
                   <p className="texts tenur texts">

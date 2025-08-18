@@ -6,11 +6,11 @@ import axios from 'axios';
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState("");
   const [projects, setProjects] = useState([]);
-  
+ 
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/home/projects");
+        const res = await axios.get("/api/home/projects");
         setProjects(res.data);
       } catch (err) {
         console.error("Error fetching projects:", err);
@@ -38,6 +38,7 @@ const Projects = () => {
         <div className="projects">
           <div className="cards_container">
             {filteredProjects.map((project, index) => (
+              
               <div key={index} className="project_card">
                 <Link
                   className="project_image"
@@ -46,7 +47,7 @@ const Projects = () => {
                   rel="noopener noreferrer"
                 >
                   <img
-                    src={`http://localhost:5000${project.img}`}
+                    src={`${process.env.REACT_APP_API_URL}${project.img}`}
                     alt="project img"
                   />
                 </Link>

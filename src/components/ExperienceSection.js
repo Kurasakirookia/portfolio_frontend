@@ -4,9 +4,9 @@ import axios from "axios";
 
 const ExperienceSection = () => {
   const [experience, setExperience] = useState([]);
-
+const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
-    axios.get("http://localhost:5000/api/home/experiences")
+    axios.get("/api/home/experiences")
       .then((res) => {
         setExperience(res.data); // assuming backend sends an array of experiences
       })
@@ -21,8 +21,9 @@ const ExperienceSection = () => {
       <div className="experience_container">
         {experience.map((company, index) => (
           <div className={`company company${index}`} key={company._id || index}>
+             
             <img
-              src={`http://localhost:5000${company.logoSrc}`}
+              src={`${API_URL}${company.logoSrc}`}
               alt={company.logoSrc}
               className="logoicon"
             />

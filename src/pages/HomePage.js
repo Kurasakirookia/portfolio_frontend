@@ -5,12 +5,12 @@ import top_img from "../assests/tejas_top.png";
 import bottom_img from "../assests/tejas_bottom.png";
 
 import { Link } from "react-router-dom";
-import { useState, useEffect } from "react";
+import { useState } from "react";
 import homeimg from "../assests/hem.JPG"
 import frame_img from "../assests/frame_portfolio.png"
 
 import ScrollTextComponent from "../components/ScrollTextComponent";
-import Contact_me from "../components/Contact_me";
+import ContactMe from "../components/ContactMe";
 import SkillsSection from "../components/SkillsSection";
 import ExperienceSection from "../components/ExperienceSection";
 import right_skill from "../assests/right_skills.png"
@@ -183,7 +183,7 @@ const [showCursor, setShowCursor] = useState(false);
     </div>
 
     <div className="contact_me">
-      <Contact_me/>
+      <ContactMe/>
 
     </div>
 

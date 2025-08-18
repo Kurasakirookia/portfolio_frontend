@@ -14,7 +14,7 @@ import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Projects from './pages/Projects';
 import Scroll from "./components/ScrollText"
 import ScrollTextComponent from './components/ScrollTextComponent';
-import Contact_me from './components/Contact_me';
+import ContactMe from './components/ContactMe';
 // import SkillsSection from './components/SkillsSection';
 // import ExperienceSection from './components/ExperienceSection';
 import AdminDashboard from './admin/AdminDashboard';
@@ -23,7 +23,7 @@ import AddSkill from './admin/AddSkill';
 import AddGraphic from './admin/AddGraphics';
 import AddProject from './admin/AddProjects';
 import ManageSkills from './admin/ManageSkills';
-import UpdateSkill from './admin/updateSkills';
+import UpdateSkill from './admin/UpdateSkill';
 import UpdateExperience from './admin/UpdateExpereince';
 import ManageExperience from './admin/ManageExperience';
 import UpdateGraphic from './admin/UpdateGraphics';
@@ -48,7 +48,7 @@ function App() {
             <Route path='/Projects' element={<Projects/>}/>
             <Route path='/scroll' element={<Scroll/>}/>
             <Route path='/scrollComponent' element={<ScrollTextComponent/>}/>
-            <Route path='/contact_me' element={<Contact_me/>}/>
+            <Route path='/contact_me' element={<ContactMe/>}/>
             {/* testing  */}
             {/* <Route path='SkillSection' element={<SkillsSection/>}/>  */}
             {/* <Route path='experiences' element={<ExperienceSection/>}/>  */}

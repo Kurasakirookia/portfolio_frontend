@@ -6,6 +6,7 @@ import "../css/Manage.css"
 import { toast } from 'react-toastify';
 
 const UpdateSkill = () => {
+   const API_URL = process.env.REACT_APP_API_URL;
   const { id } = useParams();
   const navigate = useNavigate();
   
@@ -19,7 +20,7 @@ const UpdateSkill = () => {
   const [existingTools, setExistingTools] = useState([]);
 
   useEffect(() => {
-    axios.get(`http://localhost:5000/api/admin/skills/${id}`)
+    axios.get(`/api/admin/skills/${id}`)
       .then(res => {
          console.log('Skill data received:', res.data);
         const skill = res.data;
@@ -95,7 +96,7 @@ const UpdateSkill = () => {
         }
       });
 
-      await axios.put(`http://localhost:5000/api/admin/skills/${id}`, skillData, {
+      await axios.put(`/api/admin/skills/${id}`, skillData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },
@@ -153,8 +154,10 @@ const UpdateSkill = () => {
             {existingTools[index]?.logoSrc && !tool.logoSrc && (
               <div style={{ marginBottom: '10px' }}>
                 <p style={{ fontSize: '14px', color: '#555' }}>Current logo:</p>
+                
                 <img 
-                  src={`http://localhost:5000${existingTools[index].logoSrc}?t=${new Date().getTime()}`} 
+                
+                  src={`${API_URL}0${existingTools[index].logoSrc}?t=${new Date().getTime()}`} 
                   alt="tool logo" 
                   style={{ width: '100px', height: '100px', objectFit: 'contain', borderRadius: '5px' }} 
                 />

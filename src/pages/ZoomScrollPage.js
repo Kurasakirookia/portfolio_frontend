@@ -11,7 +11,7 @@ import axios from "axios";
 
 
 const ZoomScrollPage = () => {
- 
+ const API_URL = process.env.REACT_APP_API_URL;
  const [scale, setScale] = useState(1.5);
   const [graphics, setGraphics] = useState([]);
   const navigate = useNavigate();
@@ -20,7 +20,7 @@ const ZoomScrollPage = () => {
   useEffect(() => {
     const fetchGraphics = async () => {
       try {
-        const res = await axios.get("http://localhost:5000/api/home/graphics");
+        const res = await axios.get("/api/home/graphics");
         setGraphics(res.data); // Assuming res.data is an array of { name, imageSrc }
       } catch (err) {
         console.error("Error fetching graphics:", err);
@@ -70,10 +70,10 @@ const ZoomScrollPage = () => {
         {graphics.slice(0).map((item, idx) => (
           <img
             key={idx}
-            src={`http://localhost:5000${item.imageSrc}`}
+            src={`${API_URL}${item.imageSrc}`}
             alt={item.name}
             className="gallery-img"
-            onClick={() => handleClick(`http://localhost:5000${item.imageSrc}`, idx)}
+            onClick={() => handleClick(`${API_URL}${item.imageSrc}`, idx)}
             style={{ cursor: "pointer" }}
           />
         ))}
