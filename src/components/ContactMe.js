@@ -3,7 +3,7 @@ import "../css/contact_me.css"
 
 
 const ContactMe = () => {
-  const recipientEmail = "tejaskumardamodar@gmail.com";
+  
 
   return (
     <div className='contact_container'>
