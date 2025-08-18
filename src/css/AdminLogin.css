@@ -4,14 +4,7 @@
   display: flex;
   justify-content: center;
   align-items: center;
- /* background: radial-gradient(
-    ellipse at bottom,
-    #5f5f6c 10%,        
-    #292932 60%,       
-    #0b0b0f 100%,       
-    transparent 100%   
-  ); */
- 
+
 }
 
 ._login_form {
@@ -25,9 +18,9 @@
   width: 100%;
   max-width: 400px;
   transition: transform 0.3s ease;
-  background: rgba(255, 255, 255, 0.086); /* transparent white */
-    backdrop-filter: blur(15px);          /* main blur effect */
-    -webkit-backdrop-filter: blur(12px);  /* Safari support */
+  background: rgba(255, 255, 255, 0.086); 
+    backdrop-filter: blur(15px);          
+    -webkit-backdrop-filter: blur(12px);  
 
     border-bottom: 1px solid rgba(255, 255, 255, 0.078);
     box-shadow: 0 4px 30px rgba(0, 0, 0, 0.393);
@@ -52,7 +45,7 @@
 ._login_form input:focus {
   outline: none;
   border-color: #161C2E;
-  /* box-shadow: 0 0 0 3px rgba(72, 77, 82, 0.2); */
+
 }
 
 ._login_form button {
@@ -84,7 +77,7 @@
 
 .password_field input {
   flex: 1;
-  padding-right: 40px; /* space for eye icon */
+  padding-right: 40px; 
 }
 
 .toggle_eye {
@@ -111,7 +104,7 @@
   transition: border 0.3s ease, background 0.3s ease;
   width: 100%;
   max-width: 300px;
-  appearance: none; /* hides default arrow in some browsers */
+  appearance: none; 
   -webkit-appearance: none;
   -moz-appearance: none;
 }
