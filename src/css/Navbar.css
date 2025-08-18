@@ -1,7 +1,6 @@
 #root{
     position: relative;
-    
-
+   
 }
 
 .Nav{
@@ -11,7 +10,8 @@
     z-index:3 ;
         
     display: flex;
-    justify-content:space-between;
+    justify-content:space-around;
+    gap: 75vw;
     align-items: center;
 
 
@@ -20,8 +20,22 @@
     background-color:rgba(176, 21, 21, 0);
     
     color: white;
-    width: 100%;
+    width: 100vw;
     height: 10vh;
+
+      background: rgba(255, 255, 255, 0); /* transparent white */
+    backdrop-filter: blur(15px);          /* main blur effect */
+    -webkit-backdrop-filter: blur(12px);  /* Safari support */
+
+    border-bottom: 1px solid rgba(255, 255, 255, 0);
+    /* box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1); */
+}
+
+.Link_item{
+    all: unset;
+    cursor: pointer;
+    color: #FE2726;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
 }
 .nav_list{
    

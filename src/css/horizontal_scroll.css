@@ -7,7 +7,7 @@ body {
 
 .scroll-wrapper {
 
-  height: 200vh; /* Ensures enough vertical scroll */
+  height: 150vh; /* Ensures enough vertical scroll */
   position: relative;
   overflow: hidden;
   transform: rotate(-3deg);
@@ -27,9 +27,9 @@ body {
 }
 
 .left-to-right {
-  top: 20%;
+  top: 10%;
 }
 
 .right-to-left {
-  top: 45%;
+  top: 40%;
 }

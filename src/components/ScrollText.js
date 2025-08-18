@@ -1,37 +1,3 @@
-// // ScrollText.jsx
-// import React, { useEffect, useRef } from "react";
-// import "../css/horizontal_scroll.css"
-
-// const ScrollText = () => {
-//   const leftRef = useRef(null);
-//   const rightRef = useRef(null);
-
-//   useEffect(() => {
-//     const handleScroll = () => {
-//       const scrollY = window.scrollY;
-//       if (leftRef.current && rightRef.current) {
-//         leftRef.current.style.transform = `translateX(${scrollY * 0.6}px)`;
-//         rightRef.current.style.transform = `translateX(${-scrollY * 0.6}px)`;
-//       }
-//     };
-
-//     window.addEventListener("scroll", handleScroll);
-//     return () => window.removeEventListener("scroll", handleScroll);
-//   }, []);
-
-//   return (
-//     <div className="scroll-wrapper">
-//       <div className="text-line left-to-right" ref={leftRef}>
-//         WONG • BRANDS • 2024
-//       </div>
-//       <div className="text-line right-to-left" ref={rightRef}>
-//         WONG • BRANDS • 2024
-//       </div>
-//     </div>
-//   );
-// };
-
-// export default ScrollText;
 
 import React, { useEffect, useRef } from "react";
 import "../css/horizontal_scroll.css";

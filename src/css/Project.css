@@ -1,5 +1,8 @@
 .projects_container2{
+   
     background-color: #FFE6E3;
+    display: flex;
+    justify-content: center;
    
 }
 
@@ -8,7 +11,7 @@
     padding: 0px;
     margin: 0px;
     padding-top: 10vh;
-    width: 100vw;
+    width: 90vw;
     min-height: 100%;
     
     display: flex;
@@ -56,26 +59,33 @@
 
 .projects{
     /* overflow-y: scroll; */
+    width: 100vw;
+    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: transparent;
     
 }
 
 .cards_container{
+    width: 80%;
     margin: 5vh 3vh 0vh 0vh;
     display: flex;
     gap: 6vh;
     justify-content: center;
     align-items: center;
    
-    
+    background-color:transparent;
     
     flex-wrap: wrap;
 }
 
 .cards_container >.project_card{
     min-width: 22%;
-    min-height: 55vh;
+    min-height: 50vh;
     max-width: 22%;
-    max-height: 55vh;
+    max-height: 50vh;
     
     background-color: transparent;
     /* background: url('../assets/card.svg') no-repeat center/contain; */

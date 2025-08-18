@@ -1,0 +1,84 @@
+.contact_container{
+    height: 120vh;
+    width: 100vw;
+    background-color:#FF2D2D ;
+    display: flex;
+    gap: 2vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+/* #FF2D2D */
+.contact_info_container{
+       height:60vh;
+        width:100% ;
+        /* border: 1px solid #FF2D2D; */
+        border-radius: 5vh;
+        display: flex;
+        flex-direction: column;
+        /* justify-content: center; */
+        gap: -5vh;
+        align-items: center;
+        position: relative;
+}
+.contact_info_container>.contact_text{
+    all: unset;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-stretch: 200%;
+    font-size: 220px;
+    color:#f5c4c4;
+
+}
+#contact_text_2{
+    position: absolute;
+    z-index: 2;
+    top: 43%;
+    padding: 0px;
+}
+
+.contact_options{
+    position: relative;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 10vw;
+    height: 5vh;
+    width:100%;
+
+    z-index: 3;
+
+}
+
+.contact_icon{
+    height: 50px;
+    width: 50px;
+    border-radius: 2vh;
+}
+
+.contact{
+    all: unset;
+    cursor: pointer;
+    color: #f5c4c4;
+    font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-size: 14px;
+
+}
+
+.email_container{
+    padding: 30px;
+}
+
+#email_tag{
+    all: unset;
+    color: #FF2D2D;
+
+    
+}
+#email{
+
+    all: unset;
+    text-decoration: underline;
+    color: #FF2D2D;
+    cursor: pointer;
+}
