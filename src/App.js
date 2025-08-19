@@ -41,7 +41,7 @@ function App() {
       
       <Routes >
         {/* <Route element={<Layout />}> */}
-            <Route path="/" element={<HomePage/>}/>
+            <Route path="/portfolio" element={<HomePage/>}/>
             <Route path='/GraphicDetails' element={<GraphicDetails/>}/>
             <Route path='/LandingSection' element={<LandingSection/>}/>
             <Route path='/ZoomScrollPage' element={<ZoomScrollPage/>}/>
