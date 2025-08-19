@@ -9,7 +9,7 @@ const ManageSkills = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    API.get('http://localhost:5000/api/home/skills') // Adjust URL if needed
+    API.get('/api/home/skills') // Adjust URL if needed
       .then(res => {
         setSkills(res.data.data || res.data); // Handle both response formats
       })
@@ -19,7 +19,7 @@ const ManageSkills = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this skill?")) {
       try {
-        await API.delete(`http://localhost:5000/api/admin/skills/${id}`);
+        await API.delete(`/api/admin/skills/${id}`);
         setSkills(skills.filter(skill => skill._id !== id));
         toast.success("Skill deleted successfully!");
       } catch (error) {

@@ -9,7 +9,7 @@ const ManageProjects = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    API.get('http://localhost:5000/api/home/projects') // Adjust URL if needed
+    API.get('/api/home/projects') // Adjust URL if needed
       .then(res => {
         setProjects(res.data.data || res.data); // Handle both response formats
       })
@@ -19,7 +19,7 @@ const ManageProjects = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this skill?")) {
       try {
-        await API.delete(`http://localhost:5000/api/admin/projects/${id}`);
+        await API.delete(`/api/admin/projects/${id}`);
         setProjects(projects.filter(project => project._id !== id));
         toast.success("Skill deleted successfully!");
       } catch (error) {
