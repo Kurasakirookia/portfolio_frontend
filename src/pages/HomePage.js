@@ -34,7 +34,6 @@ const [showCursor, setShowCursor] = useState(false);
 <div className="body">
     <div className="container">
 
-       {/* Sticky background wrapper */}
         <div className="sticky-bg-wrapper">
           <div className="sticky-bg">
             <img src={homeimg} alt="Background" className="background-img" />
@@ -42,9 +41,8 @@ const [showCursor, setShowCursor] = useState(false);
         </div>
         
 
-       {/* <div className="scroll-wrapper"> */}
           <div className="scroll-section">
-            {/* First div moves UP */}
+
             <motion.div
               style={{ y: moveUp, opacity: opacityEffect }}
               className="box box1"
@@ -82,12 +80,6 @@ const [showCursor, setShowCursor] = useState(false);
 
             </motion.div>
           </div>
-      {/* </div> */}
-      
-
-   {/* <div className="image-wrapper">
-     <img src={homeimg} alt="Tejas" className="pinned-image" />
-  </div> */}
 
     
   </div>
