@@ -19,13 +19,28 @@ const UpdateProject = () => {
   });
 
   const [existingImage, setExistingImage] = useState('');
+  const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    console.log('Fetching project with ID:', id); // Debug log
-    
-    API.get(`/api/admin/projects/${id}`)
-      .then(res => {
-        console.log('Project data received:', res.data); // Debug log
+    const fetchProject = async () => {
+      try {
+        console.log('Fetching project with ID:', id); // Debug log
+        
+        // Get auth token (adjust the key name based on how you store it)
+        const token = localStorage.getItem('authToken') || localStorage.getItem('token');
+        console.log('Auth token:', token ? 'Present' : 'Missing'); // Debug log
+        
+        const config = token ? {
+          headers: {
+            'Authorization': `Bearer ${token}`,
+            // Or use whatever header format your backend expects:
+            // 'x-auth-token': token,
+          }
+        } : {};
+        
+        const res = await API.get(`/api/admin/projects/${id}`, config);
+        console.log('API Response:', res.data); // Debug log
+        
         const project = res.data;
         
         setFormData({
@@ -39,11 +54,26 @@ const UpdateProject = () => {
         
         const API_URL = process.env.REACT_APP_API_URL;
         setExistingImage(project.img ? `${API_URL}${project.img}` : '');
-      })
-      .catch(err => {
+        
+        console.log('Form data set:', { // Debug log
+          title: project.title || '',
+          link: project.link || '',
+          description: project.description || '',
+          startDate: project.startDate ? project.startDate.slice(0, 10) : '',
+          endDate: project.endDate ? project.endDate.slice(0, 10) : ''
+        });
+        
+      } catch (err) {
         console.error("Failed to fetch project:", err);
-        toast.error("Failed to load project data");
-      });
+        toast.error("Failed to fetch project data");
+      } finally {
+        setLoading(false);
+      }
+    };
+
+    if (id) {
+      fetchProject();
+    }
   }, [id]);
 
   const handleChange = (e) => {
@@ -60,7 +90,7 @@ const UpdateProject = () => {
     const updatedFormData = new FormData();
 
     for (let key in formData) {
-      if (formData[key]) { // only append non-null fields
+      if (formData[key] !== null && formData[key] !== undefined && formData[key] !== '') {
         updatedFormData.append(key, formData[key]);
       }
     }
@@ -70,12 +100,20 @@ const UpdateProject = () => {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       toast.success("Project updated successfully!");
-      navigate('/admin/projects'); // Adjust this route as needed
+      navigate('/admin/projects');
     } catch (error) {
       console.error("Update failed", error);
       toast.error("Update failed. Check console.");
     }
   };
+
+  if (loading) {
+    return (
+      <div className="form_contianer div_top_change">
+        <h1>Loading...</h1>
+      </div>
+    );
+  }
 
   return (
     <div className="form_contianer div_top_change">
