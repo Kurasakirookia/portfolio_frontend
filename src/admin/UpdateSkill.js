@@ -103,7 +103,7 @@ const UpdateSkill = () => {
       });
 
       toast.success("Skill updated successfully!");
-      navigate('/admin/skills'); // Navigate back to manage skills
+      navigate('/admin/skills'); 
     } catch (err) {
       toast.error("Error updating skill!");
       console.error(err);

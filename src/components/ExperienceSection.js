@@ -7,7 +7,7 @@ const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
     API.get("/api/home/experiences")
       .then((res) => {
-        setExperience(res.data); // assuming backend sends an array of experiences
+        setExperience(res.data); 
       })
       .catch((err) => {
         console.error("Error fetching experiences:", err);
