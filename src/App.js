@@ -49,14 +49,7 @@ function App() {
             <Route path='/scroll' element={<Scroll/>}/>
             <Route path='/scrollComponent' element={<ScrollTextComponent/>}/>
             <Route path='/contact_me' element={<ContactMe/>}/>
-            {/* testing  */}
-            {/* <Route path='SkillSection' element={<SkillsSection/>}/>  */}
-            {/* <Route path='experiences' element={<ExperienceSection/>}/>  */}
 
-            {/* <Route path='contact_me' element={<contact_me/>}/> */}
-
-
-            {/* admin */}
             
             <Route element={<AdminRoute />}>
                 <Route path='/admin' element={<AdminDashboard/>}/>
