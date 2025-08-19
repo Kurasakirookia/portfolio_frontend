@@ -15,6 +15,8 @@ import Projects from './pages/Projects';
 import Scroll from "./components/ScrollText"
 import ScrollTextComponent from './components/ScrollTextComponent';
 import ContactMe from './components/ContactMe';
+
+import LoadingScreen from './components/LoadingScreen';
 // import SkillsSection from './components/SkillsSection';
 // import ExperienceSection from './components/ExperienceSection';
 import AdminDashboard from './admin/AdminDashboard';
@@ -30,6 +32,7 @@ import UpdateGraphic from './admin/UpdateGraphics';
 import ManageGraphics from './admin/ManageGraphics';
 import UpdateProject from './admin/UpdateProjects';
 import ManageProjects from './admin/ManageProjects';
+
 
 import AdminRoute from "./components/AdminRoute";
 import AdminLogin from './admin/AdminLogin';
@@ -49,6 +52,7 @@ function App() {
             <Route path='/scroll' element={<Scroll/>}/>
             <Route path='/scrollComponent' element={<ScrollTextComponent/>}/>
             <Route path='/contact_me' element={<ContactMe/>}/>
+            <Route path='/loading' element={<LoadingScreen/>}/>
 
             
             <Route element={<AdminRoute />}>

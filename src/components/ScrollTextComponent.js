@@ -9,3 +9,4 @@ const ScrollTextComponent = () => {
 }
 
 export default ScrollTextComponent
+// akfjajdfjalf
