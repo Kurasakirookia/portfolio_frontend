@@ -21,21 +21,29 @@ const UpdateProject = () => {
   const [existingImage, setExistingImage] = useState('');
 
   useEffect(() => {
+    console.log('Fetching project with ID:', id); // Debug log
+    
     API.get(`/api/admin/projects/${id}`)
       .then(res => {
+        console.log('Project data received:', res.data); // Debug log
         const project = res.data;
+        
         setFormData({
-          title: project.title,
+          title: project.title || '',
           link: project.link || '',
-          description: project.description,
+          description: project.description || '',
           startDate: project.startDate ? project.startDate.slice(0, 10) : '',
           endDate: project.endDate ? project.endDate.slice(0, 10) : '',
           img: null // don't prefill file input
         });
-         const API_URL = process.env.REACT_APP_API_URL;
+        
+        const API_URL = process.env.REACT_APP_API_URL;
         setExistingImage(project.img ? `${API_URL}${project.img}` : '');
       })
-      .catch(err => console.error("Failed to fetch project:", err));
+      .catch(err => {
+        console.error("Failed to fetch project:", err);
+        toast.error("Failed to load project data");
+      });
   }, [id]);
 
   const handleChange = (e) => {
