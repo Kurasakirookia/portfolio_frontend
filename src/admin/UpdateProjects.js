@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import API from "../utils/api";
 import "../css/AddExperience.css"
 import "../css/Manage.css"
 import { toast } from 'react-toastify';
@@ -21,7 +21,7 @@ const UpdateProject = () => {
   const [existingImage, setExistingImage] = useState('');
 
   useEffect(() => {
-    axios.get(`/api/admin/projects/${id}`)
+    API.get(`/api/admin/projects/${id}`)
       .then(res => {
         const project = res.data;
         setFormData({
@@ -58,7 +58,7 @@ const UpdateProject = () => {
     }
 
     try {
-      await axios.put(`/api/admin/projects/${id}`, updatedFormData, {
+      await API.put(`/api/admin/projects/${id}`, updatedFormData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       toast.success("Project updated successfully!");

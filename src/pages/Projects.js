@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import "../css/Project.css";
 import { Link } from 'react-router-dom';
-import axios from 'axios';
+import API from "../utils/api";
 
 const Projects = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -10,7 +10,7 @@ const Projects = () => {
   useEffect(() => {
     const fetchProjects = async () => {
       try {
-        const res = await axios.get("/api/home/projects");
+        const res = await API.get("/api/home/projects");
         setProjects(res.data);
       } catch (err) {
         console.error("Error fetching projects:", err);

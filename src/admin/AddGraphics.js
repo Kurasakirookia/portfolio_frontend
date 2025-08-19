@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import API from "../utils/api";
 import { toast } from "react-toastify";
 import "../css/AddExperience.css";
 
@@ -28,7 +28,7 @@ const AddGraphic = () => {
         graphicData.append(key, formData[key]);
       }
 
-      await axios.post("/api/admin/graphics", graphicData, {
+      await API.post("/api/admin/graphics", graphicData, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

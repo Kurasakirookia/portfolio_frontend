@@ -6,7 +6,7 @@ import graphic from "../assests/gprahics_0.png";
 // import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
-import axios from "axios";
+import API from "../utils/api";
 
 
 
@@ -20,7 +20,7 @@ const ZoomScrollPage = () => {
   useEffect(() => {
     const fetchGraphics = async () => {
       try {
-        const res = await axios.get("/api/home/graphics");
+        const res = await API.get("/api/home/graphics");
         setGraphics(res.data); // Assuming res.data is an array of { name, imageSrc }
       } catch (err) {
         console.error("Error fetching graphics:", err);

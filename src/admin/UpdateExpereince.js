@@ -1,7 +1,7 @@
 
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import API from "../utils/api";
 import "../css/AddExperience.css"
 import "../css/Manage.css"
 import { toast } from 'react-toastify';
@@ -22,7 +22,7 @@ const UpdateExperience = () => {
   const [existingLogo, setExistingLogo] = useState('');
 
   useEffect(() => {
-    axios.get(`/api/admin/experiences/${id}`)
+    API.get(`/api/admin/experiences/${id}`)
       .then(res => {
         const experience = res.data;
         setFormData({
@@ -59,7 +59,7 @@ const UpdateExperience = () => {
     }
 
     try {
-      await axios.put(`/api/admin/experiences/${id}`, updatedFormData, {
+      await API.put(`/api/admin/experiences/${id}`, updatedFormData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       toast.success("Experience updated successfully!");

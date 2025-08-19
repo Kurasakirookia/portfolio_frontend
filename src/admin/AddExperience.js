@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import axios from 'axios';
+import API from "../utils/api"
 import { toast } from 'react-toastify';
 import "../css/AddExperience.css"; // Reuse same styling
 
@@ -31,7 +31,7 @@ const AddExperience = () => {
         experienceData.append(key, formData[key]);
       }
 
-      await axios.post(
+      await API.post(
          process.env.REACT_APP_API_URL,
         experienceData,
         {

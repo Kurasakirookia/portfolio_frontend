@@ -1,6 +1,6 @@
-import React from 'react'
+
 import Navbar from './Navbar'
-import Footer from './Footer'
+
 import { Outlet } from 'react-router-dom'
 import "../css/Layout.css"
 
@@ -11,7 +11,7 @@ const Layout = () => {
         <div className="layout_content">
             <Outlet/>
         </div>
-        <Footer/>
+       
       
     </div>
   )

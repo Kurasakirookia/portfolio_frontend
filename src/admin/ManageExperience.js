@@ -1,5 +1,5 @@
 import React, { useEffect, useState } from 'react';
-import axios from 'axios';
+import API from "../utils/api";
 import { useNavigate } from 'react-router-dom';
 import "../css/ManageSkills.css"
 import { toast } from 'react-toastify';
@@ -9,7 +9,7 @@ const ManageExperience = () => {
   const navigate = useNavigate();
 
   useEffect(() => {
-    axios.get('/api/home/experiences') // Adjust URL if needed
+    API.get('/api/home/experiences') // Adjust URL if needed
       .then(res => {
         setExps(res.data.data || res.data); // Handle both response formats
       })
@@ -19,7 +19,7 @@ const ManageExperience = () => {
   const handleDelete = async (id) => {
     if (window.confirm("Are you sure you want to delete this skill?")) {
       try {
-        await axios.delete(`/api/admin/experiences/${id}`);
+        await API.delete(`/api/admin/experiences/${id}`);
         setExps(exp.filter(skill => skill._id !== id));
         toast.success("Skill deleted successfully!");
       } catch (error) {

@@ -1,6 +1,6 @@
 // AddSkill.js
 import React, { useState } from "react";
-import axios from "axios";
+import API from "../utils/api";
 import { toast } from "react-toastify";
 import "../css/AddSkill.css"
 // import "../css/AddExperience.css"
@@ -59,7 +59,7 @@ const AddSkill = () => {
         }
       });
 
-      await axios.post("/api/admin/skills", skillData, {
+      await API.post("/api/admin/skills", skillData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

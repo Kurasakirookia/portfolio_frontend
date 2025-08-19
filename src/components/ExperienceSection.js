@@ -1,12 +1,11 @@
-import React, { useEffect, useState } from "react";
+import  { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
-import axios from "axios";
-
+import API from "../utils/api";
 const ExperienceSection = () => {
   const [experience, setExperience] = useState([]);
 const API_URL = process.env.REACT_APP_API_URL;
   useEffect(() => {
-    axios.get("/api/home/experiences")
+    API.get("/api/home/experiences")
       .then((res) => {
         setExperience(res.data); // assuming backend sends an array of experiences
       })

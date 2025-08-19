@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import API from "../utils/api";
 import "../css/AddExperience.css"
 import "../css/Manage.css"
 import { toast } from 'react-toastify';
@@ -18,7 +18,7 @@ const UpdateGraphic = () => {
   const [existingImage, setExistingImage] = useState('');
 
   useEffect(() => {
-    axios.get(`/api/admin/graphics/${id}`)
+    API.get(`/api/admin/graphics/${id}`)
       .then(res => {
         const graphic = res.data;
         setFormData({
@@ -52,7 +52,7 @@ const UpdateGraphic = () => {
     }
 
     try {
-      await axios.put(`/api/admin/graphics/${id}`, updatedFormData, {
+      await API.put(`/api/admin/graphics/${id}`, updatedFormData, {
         headers: { 'Content-Type': 'multipart/form-data' }
       });
       toast.success("Graphic updated successfully!");

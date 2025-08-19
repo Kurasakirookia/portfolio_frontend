@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { useParams, useNavigate } from 'react-router-dom';
-import axios from 'axios';
+import API from "../utils/api";
 import "../css/AddExperience.css"
 import "../css/Manage.css"
 import { toast } from 'react-toastify';
@@ -20,7 +20,7 @@ const UpdateSkill = () => {
   const [existingTools, setExistingTools] = useState([]);
 
   useEffect(() => {
-    axios.get(`/api/admin/skills/${id}`)
+    API.get(`/api/admin/skills/${id}`)
       .then(res => {
          console.log('Skill data received:', res.data);
         const skill = res.data;
@@ -96,7 +96,7 @@ const UpdateSkill = () => {
         }
       });
 
-      await axios.put(`/api/admin/skills/${id}`, skillData, {
+      await API.put(`/api/admin/skills/${id}`, skillData, {
         headers: {
           "Content-Type": "multipart/form-data",
         },

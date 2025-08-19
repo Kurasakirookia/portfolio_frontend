@@ -1,5 +1,5 @@
 import { useState } from "react";
-import axios from "axios";
+import API from "../utils/api";
 
 import { useNavigate } from "react-router-dom";
 import { toast } from "react-toastify";
@@ -17,7 +17,7 @@ const AdminLogin = () => {
   const handleLogin = async (e) => {
     e.preventDefault();
     try {
-      const res = await axios.post("/api/auth/login", {
+      const res = await API.post("/api/auth/login", {
         email,
         password,
    

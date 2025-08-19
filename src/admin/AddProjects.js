@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import axios from "axios";
+import API from "../utils/api";
 import "../css/AddExperience.css"
 import { toast } from "react-toastify";
 const AddProject = () => {
@@ -31,7 +31,7 @@ const AddProject = () => {
         }
       });
 
-      const res = await axios.post("/api/admin/projects", data, {
+      const res = await API.post("/api/admin/projects", data, {
         headers: { "Content-Type": "multipart/form-data" },
       });
 

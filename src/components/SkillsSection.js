@@ -1,5 +1,5 @@
 import { useEffect, useState } from "react";
-import axios from "axios";
+import API from "../utils/api";
 import "../css/HomePage.css";
 export default function SkillsSection() {
   
@@ -7,7 +7,7 @@ export default function SkillsSection() {
   const [skills, setSkills] = useState([]);
 
   useEffect(() => {
-    axios.get("/api/home/skills")
+    API.get("/api/home/skills")
       .then(res => setSkills(res.data))
       .catch(err => console.error("Error fetching skills:", err));
   }, []);
