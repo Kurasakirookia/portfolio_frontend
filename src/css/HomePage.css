@@ -573,20 +573,28 @@ margin-bottom: 20vh;
 
 /* intro section  */
 
+.tejas_intro_image_container{
+    min-height: 50vh;
 
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
 .intro_section{
     height: 50vh;
 }
-.tejas_intro_image_container{
-    height: 30%;
-    width: 30%;
-    /* object-fit: contain; */
+.tejas_intro_image_container>img{
+    width: 100%;
+    height: 100%;
+    object-fit: contain;
 }
 
-.right_intro{
-    /* height: 100vh; */
+/* .right_intro{
+    background-color:#FE2726;
+    display: flex;
+    align-items: flex-start;
     
-}
+} */
 
 .tejas_intro>.texts{
   
@@ -687,6 +695,8 @@ margin-bottom: 20vh;
 
 }
 .sticky_section_title{
+    margin: 0px;
+    padding: 0px;
     width: 100%;
 }
 
@@ -696,21 +706,25 @@ margin-bottom: 20vh;
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    justify-content:center;
-    background-color: #fff;
+    justify-content:flex-start;
+    /* background-color: #fff; */
 }
 .skills_icons{
     display: none;
 }
 #skill_container{
+    
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
-    background-color:aqua;
+    /* padding-top: 8vh; */
+    /* background-color:aqua; */
+    /* height: 40vh; */
+   
     
 }
 .skill_container>.skill{
-   background-color:#FE2726;
+   /* background-color:#FE2726; */
    margin: 0px;
    min-width: 40%;
    padding: 5px;
@@ -723,5 +737,28 @@ margin-bottom: 20vh;
 .skill_details>p{
     margin: 0px;
 }
+
+
+
+ .skills_section,
+  .skills_intro {
+    /* height: auto;      */
+    /* min-height: auto;   */
+    /* padding-top:30vh ; */
+    padding-bottom: 5vh; 
+  }
+ #skill_container {
+    margin: 0vh 0;        /* smaller margin */
+    flex-direction: column;
+  }
+
+  .exprience_intro {
+    margin: 2vh 0;        /* avoid pushing content too far down */
+  }
+
+.skill{
+    height: 40vh;
+}
+
 }
 /* right_intro skills_intro hover-target */

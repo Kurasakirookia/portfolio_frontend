@@ -17,7 +17,7 @@ export default function SkillsSection() {
       {skills.map((skill, skillIndex) => (
         <div className="exprience_intro skill_intro" id={skill.skillName.toLowerCase().replace(/\s+/g, "_")} key={skillIndex}>
           <h2 className="texth">{skill.skillName}</h2>
-          <div className="experience_container skill_container">
+          <div className="experience_container skill_container skill_inner_container">
             {skill.tools.map((tool, toolIndex) => (
               <div className={`company company${toolIndex} skill skill${toolIndex}`} key={toolIndex}>
                 <img src={`${API_URL}${tool.logoSrc}`} alt={tool.logoSrc} className="logoicon" />
