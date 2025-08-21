@@ -3,6 +3,14 @@ body{
     background-color: #FFE6E3;
    
 }
+
+@font-face {
+  font-family: 'MyImpact';
+  src:  url('../assests/impact.ttf') format('truetype');
+  font-weight: normal;
+  font-style: normal;
+}
+
 .container {
     
     position: relative;
@@ -426,6 +434,7 @@ margin-bottom: 20vh;
 
 .texth{
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
+    font-family: MyImpact;
     font-weight: 200;
     letter-spacing: 1.5px;
      /* display: inline-block;
