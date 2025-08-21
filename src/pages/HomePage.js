@@ -63,7 +63,7 @@ const [showCursor, setShowCursor] = useState(false);
                 </div>
 
                 <div className="bottom_text_container">
-                    <div className="insta_link">
+                    <div className="insta_link soc_link">
                       <a href="https://www.instagram.com/tejasdkumar" className="link text insta">INSTAGRAM</a>
                     </div>
 
@@ -71,7 +71,7 @@ const [showCursor, setShowCursor] = useState(false);
                       <p className="text">Tejas—a coding wizard, tech nerd, and designer—who pretends to do it all alone but low-key can't live without his beloved Pixey (ChatGPT). It’s not dependency... it’s true love.</p>
                     </div>
 
-                    <div className="email_link">
+                    <div className="email_link soc_link">
                       <a href="mailto:tejas1soc@gmail.com" className="link text email">EMAIL</a>
                     </div>
                 </div>

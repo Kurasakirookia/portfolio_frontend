@@ -82,3 +82,24 @@
     color: #FF2D2D;
     cursor: pointer;
 }
+
+@media(max-width:768px){
+    .contact_container{
+        height: 40vh;
+    }
+
+    .contact_info_container{
+        height: 60%;
+    }
+
+    .contact_info_container>.contact_text{
+        font-size: 85px;
+    }
+ 
+    .contact{
+        font-size: 10px;
+    }
+    .contact_options{
+        height: 1vh;
+    }
+}

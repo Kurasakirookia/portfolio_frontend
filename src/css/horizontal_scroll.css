@@ -33,3 +33,29 @@ body {
 .right-to-left {
   top: 40%;
 }
+
+@media (max-width:768px) {
+  .scroll-wrapper {
+ 
+
+  height: 100vh; /* Ensures enough vertical scroll */
+  position: relative;
+  overflow: hidden;
+  transform: rotate(0deg);
+}
+
+.text-line{
+  width: 200vw;
+  height: 30%;
+  font-size: 30vw;
+
+}
+.left-to-right {
+  top: 10%;
+}
+
+.right-to-left {
+  top: 28%;
+}
+
+}
