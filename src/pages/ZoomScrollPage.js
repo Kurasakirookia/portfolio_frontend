@@ -2,7 +2,7 @@
 import React, { useEffect, useState } from "react";
 import "../css/ZoomScrollPage.css";
 import graphic from "../assests/gprahics_0.png";
-
+import graphicMobile from "../assests/graphicMobile.png"
 // import { Link } from "react-router-dom";
 import { useNavigate } from 'react-router-dom';
 
@@ -59,7 +59,13 @@ const ZoomScrollPage = () => {
                 className="zoom-section"
                 style={{ transform: `scale(${scale})` }}
             >
-                <img src={graphic} alt="Tejas" className="zoom-image" />
+                <picture>
+                  {/* Mobile first (max-width: 768px) */}
+                  <source media="(max-width: 768px)" srcSet={graphicMobile} className="zoom-image" />
+                  
+                  {/* Default / Desktop */}
+                  <img src={graphic} alt="Tejas" className="zoom-image" />
+                </picture>
                 
             </section>
             

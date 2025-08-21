@@ -12,7 +12,7 @@
     margin: 0px;
     padding-top: 10vh;
     width: 90vw;
-    min-height: 100%;
+    min-height: auto;
     
     display: flex;
     flex-direction: column;
@@ -60,7 +60,7 @@
 .projects{
     /* overflow-y: scroll; */
     width: 100vw;
-    
+    height: max-content;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -230,3 +230,31 @@
 
 
 
+@media(max-width:768px){
+    .projects_container2{
+        width: 100%;
+    }
+    .project_container{
+        width: 100%;
+        height: auto;
+    }
+
+    .search_container{
+        height: 5%;
+    }
+    .search_input{
+        min-width:70%;
+        border-radius: 3vh;
+    }
+    .projects{
+        width: 100%;
+        
+    }
+    .cards_container{
+        gap: 15vh;
+    }
+    .cards_container >.project_card{
+        min-width: 75%;
+        min-height: 30vh;
+    }
+}
