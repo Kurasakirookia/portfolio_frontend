@@ -37,7 +37,7 @@ body {
 @media (max-width:768px) {
   .scroll-wrapper {
  
-
+    /* display: block; */
   height: 100vh; /* Ensures enough vertical scroll */
   position: relative;
   overflow: hidden;
@@ -47,7 +47,7 @@ body {
 .text-line{
   width: 200vw;
   height: 30%;
-  font-size: 30vw;
+  font-size: 40vw;
 
 }
 .left-to-right {
@@ -55,7 +55,7 @@ body {
 }
 
 .right-to-left {
-  top: 28%;
+  top: 30%;
 }
 
 }

@@ -43,9 +43,7 @@
     display: flex;
     gap: 10px;
     font-family: Arial, Helvetica, sans-serif;
-   
-
-
+    font-size: 14px;
 }
 li{
     all: unset;
@@ -65,6 +63,7 @@ li{
 
 @media (max-width: 768px) {
     .Nav{
+        z-index: 3;
         gap: 20vw;
         height: 5vh;
         justify-content: space-between;
