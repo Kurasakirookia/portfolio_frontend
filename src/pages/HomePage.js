@@ -92,7 +92,7 @@ const [showCursor, setShowCursor] = useState(false);
         <img src={frame_img} alt="" />
       </div>
 
-      <div className="right_intro  hover-target"
+      <div className="right_intro  hover-target about_section"
       onMouseEnter={() => setShowCursor(true)}
       onMouseLeave={() => setShowCursor(false)}
       onMouseMove={handleMouseMove}>
