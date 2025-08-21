@@ -241,8 +241,13 @@
 
     .search_container{
         height: 5%;
+        padding: 0px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
     }
     .search_input{
+        padding-left: 10%;
         min-width:70%;
         border-radius: 3vh;
     }
@@ -251,10 +256,11 @@
         
     }
     .cards_container{
-        gap: 15vh;
+        
+        
     }
     .cards_container >.project_card{
-        min-width: 75%;
+        min-width: 90%;
         min-height: 30vh;
     }
 }

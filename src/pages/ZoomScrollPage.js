@@ -64,7 +64,7 @@ const ZoomScrollPage = () => {
                   <source media="(max-width: 768px)" srcSet={graphicMobile} className="zoom-image" />
                   
                   {/* Default / Desktop */}
-                  <img src={graphic} alt="Tejas" className="zoom-image" />
+                  <img src={graphic}  className="zoom-image" />
                 </picture>
                 
             </section>
