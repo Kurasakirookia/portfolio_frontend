@@ -589,12 +589,14 @@ margin-bottom: 20vh;
     z-index: 5;
 
 }
-.soc_link{
+.soc_link>.link{
     cursor: pointer;
     position: relative;
     z-index: 5px;
-        font-family: 'Anton';
+    font-family: 'Anton';
+    
 }
+
 
 
 /* intro section  */
