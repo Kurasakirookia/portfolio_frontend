@@ -87,5 +87,11 @@ li{
     padding-right: 7%;
 
 }
+.Link_item{
+    all: unset;
+    cursor: pointer;
+    color: #FE2726;
+    font-family: 'Anton';
+}
 
 }

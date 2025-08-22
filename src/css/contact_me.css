@@ -96,10 +96,12 @@
 
     .contact_info_container>.contact_text{
         font-size: 75px;
+        font-family: 'Anton';
     }
  
     .contact{
         font-size: 10px;
+        font-family: 'Anton';
     }
     .contact_options{
         height: 1vh;
