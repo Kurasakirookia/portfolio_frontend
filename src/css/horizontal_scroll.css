@@ -48,6 +48,7 @@ body {
   width: 200vw;
   height: 30%;
   font-size: 30vw;
+  font-family: 'Anton';
 
 }
 .left-to-right {
@@ -55,7 +56,7 @@ body {
 }
 
 .right-to-left {
-  top: 30%;
+  top: 27%;
 }
 
 }

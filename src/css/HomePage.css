@@ -575,6 +575,12 @@ margin-bottom: 20vh;
 }
 .text_container>.text{
     font-size: 10px;
+   
+    font-family: 'Anton';
+
+ 
+
+
     
 }
 
@@ -587,6 +593,7 @@ margin-bottom: 20vh;
     cursor: pointer;
     position: relative;
     z-index: 5px;
+        font-family: 'Anton';
 }
 
 
@@ -803,6 +810,7 @@ margin-bottom: 20vh;
 .skill{
     height: 40vh;
 }
+
 
 }
 /* right_intro skills_intro hover-target */
